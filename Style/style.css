@@ -1,26 +1,26 @@
 @font-face {
   font-family: "Blauer";
-  src: url("Style/fonts/BlauerNue-Bold.otf") format("opentype");
+  src: url("fonts/BlauerNue-Bold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "BlauerSemibold";
-  src: url("Style/fonts/BlauerNue-SemiBold.woff") format("woff");
+  src: url("fonts/BlauerNue-SemiBold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "BlauerMedium";
-  src: url("Style/fonts/BlauerNue-Medium.otf") format("opentype");
+  src: url("fonts/BlauerNue-Medium.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "BlauerRegular";
-  src: url("Style/fonts/BlauerNue-Regular.otf") format("opentype");
+  src: url("fonts/BlauerNue-Regular.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "BlauerLight";
-  src: url("Style/fonts/BlauerNue-Light.otf") format("opentype");
+  src: url("fonts/BlauerNue-Light.otf") format("opentype");
   font-display: swap;
 }
 * {
