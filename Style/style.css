@@ -917,13 +917,13 @@ body {
   z-index: 5;
 }
 .Abody .first {
-  background-image: url("/Gallery/LandingImages/realEstateIamge.png");
+  background-image: url("Gallery/LandingImages/realEstateIamge.png");
 }
 .Abody .second {
-  background-image: url("/Gallery/LandingImages/MakeupBrand.png");
+  background-image: url("Gallery/LandingImages/MakeupBrand.png");
 }
 .Abody .third {
-  background-image: url("/gallery/LandingImages/jewelry.png");
+  background-image: url("Gallery/LandingImages/jewelry.png");
 }
 .Abody .show-image {
   position: absolute;
