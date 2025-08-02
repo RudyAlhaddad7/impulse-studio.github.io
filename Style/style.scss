@@ -1,0 +1,2186 @@
+$primary: #f5f5f5;
+$secondary: #050608;
+$terchary: #776b6b;
+$quad: #776B6B;
+$primaryS1: #efefef;
+$hoverColor: #5439F8;
+$test: #303030;
+
+@font-face{
+    font-family: 'Blauer';
+    src: url('/Style/fonts/BlauerNue-Bold.otf') format('opentype');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'BlauerSemibold';
+    src: url('/Style/fonts/BlauerNue-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family: 'BlauerMedium';
+    src: url('/Style/fonts/BlauerNue-Medium.otf') format('opentype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BlauerRegular';
+    src: url('/Style/fonts/BlauerNue-Regular.otf') format('opentype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BlauerLight';
+    src: url('/Style/fonts/BlauerNue-Light.otf') format('opentype');
+    font-display: swap;
+}
+
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $secondary;
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+body{
+    display: contents;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    
+}
+h1, h2, h3, h4, p, a{
+    font-family:  'Nunito Sans', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+h1{
+
+    font-size: calc(5vw + 1.2em);
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: calc(3vw + 1em);
+}
+h3{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: calc(2vw + 1.8em);
+    color: $primary;
+    line-height: 105%;
+}
+h4{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: calc(1.6vw + 1.2em);
+    color: $primary;
+    line-height: 105%;
+}
+
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p{
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+    font-size: 1vw;
+    color: $primary;
+}
+a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: calc(1.6vw + 1.2em);
+}
+.REMOVEBR{
+    display: none;
+}
+.webLinkPhone{
+    display: none;
+}
+.Button{
+    background-color: #424040;
+    text-align: center;
+    padding: 10px 16px 10px 16px;
+    border-radius: 50px;
+    color: #f5f5f5;
+    font-size: 3vw;
+    width: 35%;
+    cursor: pointer;
+}
+.Button:hover{
+    transition: ease-in 0.3s;
+    background-color: $hoverColor;
+    color:$primary ;
+}
+.Asection1Phone{
+  display: none;
+}
+
+.HeaderMenue{
+    position: fixed;
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #edf0f55a;
+    z-index: 1000;
+    .HeaderMenueInner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .Logo{
+            color: #424242;
+            font-family: "BlauerSemibold";
+            font-size: calc(1vw + 1.25em);
+        }
+        .Links{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            width: 25%;
+            .Link{
+                color: #424242;
+                font-size: calc(0.85vw + 0.4em);
+                font-weight: 500;
+                margin-left: 10%;
+                
+            }
+            .burgerBar{
+                width: 35px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .burgerBar1{
+                    width: 35px;
+                    height: 2px;
+                    background-color: #424242;
+                    margin-bottom: 4px;
+
+                }
+                .burgerBar2{
+                    width: 35px;
+                    height: 2px;
+                    background-color: #424242;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    
+}
+.navigation{
+    position: relative;
+    width: 100vw;
+    z-index: 10;
+    
+    .navToggle{
+        position: fixed;
+        top: 1vh;
+        right: 1vw;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 900;
+        cursor:  pointer;
+        .bar1{
+            position: absolute; 
+            display: inline-block;
+            right: 0;
+            width: 30px;
+            height: 1.75px;
+            background-color: $primaryS1;
+            transform: translateY(3px);
+            transition: transform 0.3s;
+        }
+        .bar2{
+            position: absolute; 
+            right: 0;
+            display: inline-block;
+            width: 20px;
+            height: 1.75px;
+            transform: translateY(-3px);
+            background-color: $primaryS1;
+            transition: transform 0.3s;
+        }
+    }
+    .menuCont{
+        position: fixed;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(239,239,239,.9999);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        transform-origin: top;
+        a{
+            text-decoration: none;
+            color: $secondary;
+            cursor: pointer;
+        }
+        .menu-Titles{
+            font-size: calc(1vw + 0.6em);
+            color: $quad;
+            font-weight: 700;
+           
+        }
+        .menu-links{
+            width: 30%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .titile{
+                padding-bottom: 30px;
+            }
+            .menuLinksCont{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+        }
+        .socials{
+            width: 30%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .SocialsCont{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 5%;
+            }
+            
+            .Stitle{
+                padding-bottom: 30px;
+            }
+            .menuLinksCont{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .socialLinks{
+            font-size: calc(0.4vw + 0.75em);
+            color: $secondary;
+            padding-bottom: 15px;
+        }
+        .emailCont{
+            display: flex;
+            flex-direction: column;
+            .menu-Titles{
+                padding-bottom: 10px;
+            }
+            .socialLinks{
+                padding: 0;
+            }
+        }
+    }
+
+}
+.RoundButton{
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 5%;
+
+    a, p{
+        color: $primary;
+        margin: 0;
+    }
+}
+.roundButtonContent{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100%;
+    border: .5px solid #464646;
+    align-items: center;
+    justify-content: center;
+    transform: all 300ms ease;
+    overflow: hidden;
+    color: #464646;
+    z-index: 10;
+    p{
+        color: #464646;
+    }
+    svg{
+        width: 20px;
+        z-index: 10;
+    }
+}
+.RBC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.Buttoncircle{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #424242;
+    opacity: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: height 0.4s, width 0.4s;
+    opacity: 0;
+}
+.ButtonText{
+    padding-top: 5px;
+    font-size: 13px;
+    color: #464646;
+    z-index: 10;
+}
+
+footer{
+    width: 85%;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+    margin-top: 5%;
+    justify-self: center;
+
+    .footerNavFrame{
+        height: 80%;
+        border-top: 1px solid #464646;
+        padding-top: 2vh;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .footerEmailLink{
+            font-size: calc(2vw + 0.3em);
+            color: #464646;
+        }
+        .informationFooter{
+            width: 60%;
+            .emailF{
+                padding-bottom: 2.5vh;
+                font-size: calc( 1.5vw + 1em);
+            }
+            .fT{
+                font-size: calc(1.2vw + 0.1em);
+                color: $quad;
+                padding-bottom: 1vh;
+            }
+            
+            .navF{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .fFP{
+                    color: #464646;
+                    font-size: calc(0.7vw + 0.2em);
+                    padding-bottom: 0.5vh;
+                }
+                .FST{
+                    color: #464646;
+                    padding-bottom: 1vh;
+                }
+                .fNavLinks{
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+            }
+        }
+        .contactUsFooter{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            .RoundButton{
+                margin-right: 0;
+                width: auto;
+            }
+        }
+        .RBF{
+            width: auto;
+        }
+    }
+    
+    .copyRights{
+        align-self: flex-start;
+        font-size: 9px;
+        padding-bottom: 2vh;    
+        color: #464646;
+    }
+}
+// About US css
+//**************************//
+//**************************//
+//**************************//
+//**************************//
+//**************************//
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    font-size: calc(1.85vw + 1.45em);
+    color: #424242;
+    font-family: "BlauerSemibold";
+}
+
+.Abody{
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+
+    .Button{
+        background-color: #424040;
+        text-align: center;
+        padding: 10px 16px 10px 16px;
+        border-radius: 50px;
+        color: #f5f5f5;
+        font-size: 1vw;
+        width: 35%;
+    }
+    .aBackgroundG {
+        width: 100vw;
+        height: 120vh; // Ensure the canvas takes up the full viewport height
+        z-index: -3;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .Asection1{
+        width: 100%;
+        height:  95vh;
+        overflow: hidden;
+        .AinnerSB{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            margin-left: 5%;
+            margin-right: 5%;
+            .ATitle{
+                font-size: var(--landing-page-font-size);
+                font-family: 'BlauerRegular';
+                align-content: center;
+                color: #424040;
+                text-align: center;
+                display: inline-block;
+                line-height: 0.9;
+            }
+            
+            .ATitleDesc{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: var(--landing-page-desc-width);
+                align-self: center;
+                .ADescText{                  
+                    font-size: calc(0.65vw + 0.65em);
+                    color: #424242;
+                    font-weight: 300;
+                }
+                
+            }
+            .Abuttons{
+                display: flex;
+                width: 35%;
+                justify-content: space-evenly;
+                .ALB{
+                    font-size: calc(0.72vw + 0.5rem);
+                    color: #FFF;
+                    background-color: $test;
+                    font-weight: 400;
+                    padding-left: 22px;
+                    padding-right: 22px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    border-radius: 8px;
+                }
+            }
+    
+        }
+    }
+    
+    .AsubSec1 {
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+        margin: 7.5% 5% 10% 5%;
+        color: $test;
+      
+        .ASS1Cont {     
+          height: 75vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .stickyASS1{
+            position:sticky;
+            top: 20%;
+            
+        }
+      
+        .ASTextCont {
+          height: 50vh;
+          
+        }
+      
+        .ASB {
+          width: 85vw;
+          font-weight: 100;
+          font-size: calc(1.8vw + 1rem);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+            
+          &.ASB1 {
+            z-index: 4;
+            position: absolute;
+            opacity: 1;
+          }
+      
+          &.ASB2 {
+            z-index: 3;
+            opacity: 0;        
+            position: absolute;
+          }
+      
+          &.ASB3 {
+            z-index: 2;
+            opacity: 0;
+            position: absolute;
+            }
+      
+          .ASBTit {
+            font-size: calc(1.8vw + 1.2rem);
+            color: $terchary; // Use a specific color code to avoid variable issues
+            padding-bottom: 5vh;
+          }
+      
+          .ASBP {
+            font-size: calc(1.6vw + 1.2rem);
+            font-weight: 100;
+            width: 70vw;
+            padding-bottom: 5vh;
+          }
+        }
+    
+    }
+    .ASub1v2P{
+        display: none;
+        overflow: hidden;
+    }
+      .ASub1v2 {
+        display: flex;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        height: 160vh;
+        margin-top: 10%;
+        margin-bottom: 20%;
+
+        .ASubCont {
+          display: flex;
+          position: relative;
+          justify-content: space-between;
+          top: 0%;
+          width: 100%;
+        }
+          
+          .timeline-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 5rem;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            pointer-events: none; /* allows clicks to go through */
+          }
+          
+          .timeline-line {
+            position: relative;
+            width: 3px;
+            height: 105%;
+            background: rgb(173, 175, 185);
+          }
+          .clipper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+          }
+          .filler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #5439f8;
+            transform: translateY(calc(-100% + var(--p, 0) * 105%));
+            transition: transform 0.3s ease-out;
+          }
+
+          .AsubDot{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgb(173, 175, 185);
+            z-index: 11;
+          }
+          .dotFirst    { top: 0%; }
+          .dotMid1   { top: 33.3%; }
+          .dotMid2   { top: 66.6%; }
+          .dotLast { top: 100%; }
+          .AsubDot.active {
+            background: #5439f8;
+          }
+          .ASub2Text{
+            width: 50%;
+          }
+          
+          
+        .Absdiv {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            justify-content: space-between;
+            height: 100%;
+            .AsubTextNum{
+                font-size: calc(0.8vw + 0.55rem);
+                padding-bottom: 2.2vh;
+                color: #424242;
+            }
+            .ASubTextTitle {
+                font-size: calc(1.5vw + 1.5rem);
+                padding-bottom: 3.2vh;
+                font-family: 'BlauerRegular';
+                color: #424242;
+                text-transform: capitalize;
+            }
+      
+            .ASubTextDescription {
+                font-size: calc(1vw + 0.6rem);
+                font-weight: 300;
+                color: #424242;
+                padding-right: 2%;
+            }
+            .ASUBTextB{
+                font-size: calc(0.72vw + 0.5rem);
+                color: #fff;
+                background-color: $test;
+                font-weight: 400;
+                margin-top: 5%;
+                width: fit-content;
+                padding-left: 22px;
+                padding-right: 22px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-radius: 8px;
+            }
+        
+            .ASubTextV2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+      
+      
+        }
+      
+        .ASub2ThreeJs {
+          width: 50%;
+          height: 80vh;
+          display: block;
+          margin-top: 10vh;
+          margin-bottom: 10vh;
+        }
+      }
+    
+    .Asection2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        margin-bottom: 15%;
+        overflow: hidden;
+        .AS2T{
+            margin-bottom: 5%;
+            font-family: 'BlauerSemibold';
+            font-size: calc(1.85vw + 1.45em);
+            color: #424242;
+        }
+        
+        .AfeturesTable{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .AS2Pic{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 40px;   
+            }
+            .AS2innertop{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5%;
+            }
+            .AS2innerbot{
+                display: flex;
+                justify-content: flex-end;
+                
+            }
+            .cards{
+                width: 30%;
+                background-color: #b0c2ff6e;
+                height: 45vh;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                backdrop-filter: blur(100.2px);
+                -webkit-backdrop-filter: blur(100.2px);
+                .AS2innerDiv{
+                    height: 85%;
+                    display: flex;
+                    margin-right: 7.5%;
+                    margin-left: 12%;
+                    flex-direction: column;
+                    align-items:flex-start;
+                    justify-content: center;
+                    .AS2CH{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        font-weight: 400;
+                        margin-bottom: 2vh;
+
+                        .AS2CI{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                height: 2.5vw;
+                                object-fit: contain;
+                            }
+                            .AS2IS{
+                                align-self: center;
+                            }
+                        }
+                    }
+                    .AS2D{
+                        width: 100%;
+                        
+                        .AS2CT{
+                            font-size: calc(1vw + 0.85rem);
+                            color: #424242;
+                            margin-bottom: 2vh;
+                            font-family: 'BlauerRegular';
+                        
+                        }
+                        .AS2CD{
+                            text-align: start;
+                            color: $test;
+                            font-size: calc(0.85vw + 0.3rem);
+                            font-weight: 300;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+.section2AN{
+    width: 100%;
+    margin-top: 8%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    .titleS{
+        margin-right:7.5%;
+        margin-left: 7.5%;
+    }
+    .title2{
+        margin-bottom: 0;
+    }
+    .projectFrame{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        height: 300vh;
+        margin-right: 7.5%;
+        margin-left: 7.5%;
+        .projectText{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            .textslides{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: flex-start;
+                width: 70%;
+                
+                
+            }
+            .Button{
+                background-color: #424040;
+                color: #f5f5f5;
+            }
+            
+            .projectTitle{
+                font-family: "BlauerRegular";
+                padding: 2% 0 2% 0;
+                span{
+                    display: none;
+                }
+            }
+            .TextSlide1{
+                .projectTitle{
+                    color: #424040;
+                }
+                .projectDesc{
+                    color: #424040;
+                }
+                .Button:hover{
+                    background-color: #091f5b;
+                }
+            }
+            .TextSlide2{
+                .projectTitle{
+                    color: #5f4820;
+                }
+                .projectDesc{
+                    color: #5f4820;
+                }
+                .Button:hover{
+                    background-color: #eb7223;
+                }
+            } 
+            .TextSlide3{
+                .projectTitle{
+                    color: #424040;
+                    
+                    
+                }
+                .projectDesc{
+                    color: #424040;
+                }
+                .Button:hover{
+                    background-color: #deb64b;
+                    color: #ffffff;
+                }
+            } 
+            
+            .webLink{
+                color: $quad;
+                font-size: 1vw;
+            }
+            .projectDesc{
+                padding-bottom: 12%;
+            }
+        }
+        
+        .projectImg{
+            overflow: visible;
+            height: 100vh;
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: flex;
+            width: 50%;
+            padding: 0;
+            -webkit-align-content: center;
+            align-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            position:-webkit-sticky;
+            
+        }
+        .stickyIMG{
+            position:-webkit-sticky;
+            position: sticky;
+            top: 0%;
+            
+        }
+            
+
+        .photosS2{
+            width: 31vw;
+            height: 31vw;
+            display: -webkit-flex;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8%;
+            z-index: 5;
+            
+            .imgRealEstate{
+                    
+                
+            }
+        }
+        }
+    }
+    .first{
+        background-image: url("/Gallery/LandingImages/realEstateIamge.png");
+    }
+    .second{
+        background-image: url("/Gallery/LandingImages/MakeupBrand.png");
+    }
+    .third{
+        background-image: url("/gallery/LandingImages/jewelry.png");
+    }
+    .show-image{
+        position: absolute;
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-position: 50%;
+        background-size: 460px 460px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cardB{
+        margin-right: 4vw;
+    }
+    .subS3div{
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-bottom: 15%;
+        .subS3Title{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            .subS3TitleText {
+                font-size: calc(1.85vw + 1.45em);
+                color: #424242;
+                font-family: 'BlauerRegular';
+                position: relative;
+                display: inline-block;
+                line-height: 1.2;
+              }
+        }
+        .subS3DescDiv{
+            width: 50%;
+            height: 32vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 5vw;
+            .subS3Desc{
+                font-size: calc(0.7vw + 0.6rem);
+                color: #565656;
+                font-weight: 500;
+                line-height: 140%;
+                position: relative;
+                display: inline-block;
+                line-height: 1.2;
+            }
+            .subS3DescStats{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                .subS3projects{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .subS3Numb{
+                    font-size: calc(3.5vw + 1.45em);
+                    color: #5439F8;
+                    font-weight: 600;
+                }
+                .subS3NumDesc{
+                    font-size: calc(0.7vw + 0.4rem);
+                    color: #565656;
+                    font-weight: 600;
+                    text-transform: lowercase;
+                }
+            }
+        }
+    }
+    .ASection3{
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+    
+        .AS3TText{
+            font-size: calc(1.85vw + 1.45em);
+            color: #424242;
+            font-family: "Blauersemibold";
+            margin-bottom: 5%;
+        }
+        .AS3Body{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            justify-content: space-between;
+            .AS3Desc{
+                margin-left: 0.25%;
+                width: 30%;
+                .AS3DescText{
+                    font-size: calc(0.6vw + 0.65rem);
+                    color: #565656;
+                    font-weight: 300;
+                    line-height: 140%;
+                    margin-top: 1vh;
+                }
+            }
+            .AS3CardsBody{
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                .AS3CardsDiv{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5%;
+                    border: solid 1px #565656;
+                    border-width: 0px 0px 1px 0px;
+                    .AS3Card{
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        width: 46%;
+                        padding-left: 2%;
+                        .AS3CardNum{
+                            font-size: calc(0.5vw + 0.65rem);
+                            color: #565656;
+                            margin-bottom: 1.5vh;
+                            font-weight: 400;
+                        }
+                        .AS3CardTitle{
+                            font-size: calc(1.5vw + 0.65rem);
+                            color: #424242;
+                            text-transform: uppercase;
+                            font-family: "BlauerRegular";
+                            margin-bottom: 1.5vh;
+                            position: relative;
+                        }
+                        .AS3CardDesc{
+                            font-size: calc(0.55vw + 0.65rem);
+                            color: #565656;
+                            font-weight: 300;
+                            line-height: 140%;
+                            padding-bottom: 4vh;
+                            width: 90%;
+                        }
+                        .AS3CDot{
+                            width: 11px;
+                            height: 11px; 
+                            border-radius: 50%;
+                            background: #5439F8;
+                            position: absolute;
+                            top: 40%;
+                            left: -20px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section6{
+        width: 85vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        display: block;
+        justify-self: center;
+        .TextholderS6{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+            margin-bottom: 4%;
+            margin-right: 22%;
+            margin-left: 2%;
+            .TextS6{
+                font-size: calc(1.25vw + 2em);
+                color: #575050;
+                font-family: "Blauerregular";
+                margin-bottom: 4%;
+            }
+        }
+    }
+    .section7{
+        display: block ;
+        width: 85vw;
+        height: 75vh;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        .mockupHolderS7{
+            background-color: #2d2d2d;
+            height: 100%;
+            border-radius: 30px;
+        }
+    }
+    .section8{
+        width: 85vw;
+        height: 75vh;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        display: block;
+        margin-top: 10vh;
+        justify-items: center;
+        align-content: center;
+        background: transparent!important;
+        .S8Cont{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent!important;
+            
+            .S83DCont{
+                width: 60%;
+                height: 50vh;
+                background: transparent!important;
+                #heartS8{
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+
+            .S8Text{
+                width: 50%;
+                height: 100%;
+                color: #424242;
+                .S8Title{
+                    font-size: calc(1.85vw + 1.2em);
+                    margin-bottom: 4%;
+                    line-height: 100%;
+                    font-family: "Blauerregular";
+                }
+                p{
+                    font-size: calc(0.85vw + 0.5em);
+                    color: #464646;
+                    margin-bottom: 6%;
+                    margin-right: 30%;
+                }
+                a{
+                    color: #464646;
+                    font-size: calc(0.85vw + 0.3em);
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .Asection2P{
+        display: none;
+    }
+    
+}
+
+// projects US css
+//**************************//
+//**************************//
+//**************************//
+//**************************//
+//**************************//
+#Projects{
+    
+    .fullPageDiv{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 3%;
+        padding-right: 3%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+        .textDivFp{
+            width: 30%;
+            display: flex;
+            position: sticky;
+            top: 50px; /* Distance from the top of the viewport */
+            align-self: flex-start; /* Aligns the sticky div at the start of the flex container */
+            flex-direction: column;
+            height: 90vh;
+            justify-content: space-between;
+            border-bottom: solid #776b6b61 0.1px;
+            .projectTitle{
+                color: #edf0f5;
+                line-height: 100%;
+                margin-bottom: 4%;
+            }
+            .projectSub{
+                font-size: 1.8rem;
+                font-weight: 100;
+                color: #ababab;
+            }
+            .servicesFooterP{
+                padding-bottom: 2.5%;
+            }
+            .servicesF{
+                font-size: 2rem; 
+                font-weight: 500;
+                
+                color: #ababab;
+            }
+            .servicesDescF{
+                font-size: 1.2rem;
+                font-weight: 100;
+            }
+        }
+        .fullPageGalleryCont{
+                display: flexbox;
+                flex-direction: column;
+                width: 50%;
+                .projectPics{
+                    width: 100%;
+                    max-width: 100%;
+                    text-align: center;
+                    clear: both;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    margin-bottom: 1.8%;
+                }
+                .picsOS{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 2%;
+                }
+                .twopicsAside{
+                    width: 49%;
+                }
+                .picSolo{
+                    width: 100%;
+                }
+        }
+    }
+    .otherProjects{
+        border-top: #776b6b61 solid 0.05px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        .oPTitle{
+            margin-top: 1%;
+            margin-bottom: 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+            .oPText{
+                font-weight: 600;
+            }
+            .oPbotton{
+                font-size: 2rem;
+                text-decoration: none;
+                align-content: center;
+                color:$primaryS1;
+                font-weight: 300;
+            }
+        }
+        
+        .oPCards{
+            display: flex;
+            justify-content: space-between;
+            .oPCard{
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                .oPCImageW{
+                    padding-bottom: 60%;
+                    position: relative;
+                    overflow: hidden;
+                    
+                    border-radius: 2rem;
+                    .oPCImage{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 2rem;
+                        position: absolute;
+                        top: 0%;
+                        bottom: 0%;
+                        left: 0%;
+                        right: 0%;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .oPCText{
+                padding-top: 3%;
+                .metaData{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 2%;
+                    p{
+                        color: $terchary;
+                    }
+
+                }
+                .oPCTitle{
+                    width: 95%;
+                    font-size: calc(1.3vw + 0.85em);
+                    .oPCTSpan{
+                        
+                        font-size: calc(1.25vw + 0.2rem);
+                        font-weight: 100;
+                        color: $terchary;
+
+                    }
+                }
+            }
+        }
+    }
+    .footerNavFrame{
+        width: 95%;
+        
+    }
+    .contactUsFooter{
+        justify-content: flex-end;
+    .RoundButton{
+        margin-top: 0;
+        margin-right: 2%;
+        .roundButtonContent{
+            width: 190px;
+            height: 190px;
+        }
+    }
+    }
+    .copyRights{
+        padding-bottom: 3%;
+        font-size: 0.8rem;
+    }
+
+   
+}
+
+
+
+
+
+
+.lineWrap {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+  
+  
+.lineWrapDesc {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #717171; /* dimmer/faded text color */
+    opacity: 1;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    transform: scaleX(1);
+    transform-origin: right center;
+    pointer-events: none;
+    white-space: pre; /* preserve spacing */
+    z-index: 2;
+    background: transparent; /* crucial: no background */
+}
+.subS3TitleP{
+    display: none;
+}
+.projectDescPhone{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .Abody{
+        .section2AN {
+            .projectFrame {
+                height: 240vh; /* Adjust height for smaller screens */
+                .projectText .textslides {
+                    width: 80%; /* Adjust width for smaller screens */
+                    height: 80vh;
+                }
+                .projectImg {
+                    top: 10vh;
+                    height: 80vh; /* Adjust height for smaller screens */
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 786px) {
+    .Abody{
+    
+    }
+}
+
+@media only screen and (max-width: 786px) {
+    .bar1{
+        width: 15px;
+    }
+    .bar2{
+        width: 10px;
+    }
+    .textTitleS{
+        font-size: calc(4.2vw + 1em);
+    }
+
+    .footer{
+        height: auto;
+        width: 100%;
+        .footerNavFrame{
+            width: 85%;
+            padding-bottom: 2vh;
+            align-items: center;
+            .RoundButton{
+                display: none;
+            }
+            .contactUsFooter{
+                display: none;
+            }
+            .informationFooter{
+                width: 100%;
+                .emailF{    
+                    padding-bottom: 2vh;
+                    .fT{
+                        font-size: calc(2vw + 0.3em);
+                    }
+                    .footerEmailLink{
+                        font-size: calc(2.4vw + 0.55em);
+                    }
+
+
+                }
+                .navF{
+                    .fNavLinks{
+                        width: 30%;
+                        .fFP{
+                            font-size: calc(2vw + 0.3em);
+                        }
+                        .fFp{
+                            font-size: calc(2vw + 0.1em);
+                        }
+                    }
+                }
+            }
+
+        }
+        .copyRights{
+            width: 85%;
+            margin: 0;
+            align-self: inherit;
+        }
+    }
+
+
+    // PROJECTS PAGES PHONE//
+        #Projects .fullPageDiv{
+            flex-direction: column;
+            .textDivFp{
+                width: 100%;
+                position: relative;
+                top: 0;
+                height: 45vh;
+                margin-bottom: 3.5vh;
+                border-bottom: solid 0.25px #ababab;
+                .projectTitle{
+                    font-size: calc(5vw + 1.8em);
+                }
+                .projectSub{
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    letter-spacing: -0.025em;
+                }
+                .servicesFooterP{
+                    padding: 0;
+                   .servicesF{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    letter-spacing: +0.05rem;
+                   }
+                   .servicesDescF{
+                    font-size: 0.75rem;
+                    letter-spacing: +0.05rem;
+                    font-weight: 300;
+                    padding-bottom: 5px;
+                   }
+                }
+            }
+            .fullPageGalleryCont{
+                width: 100%;
+                .projectFigure .projectPics{
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 5%;
+                }
+                .picsOS{
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 5%;
+                    .twopicsAside{
+                        width: 48%;
+                    }
+                }
+            }
+            
+        }
+       #Projects .otherProjects{
+            border-top: solid 0.25px #ababab;
+            .oPTitle{
+                align-items: center;
+                margin-top: 2%;
+                margin-bottom: 7.5%;
+                .oPText{
+                    font-size: calc(2vw + 2.3rem);
+                }
+                .oPbotton{
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    text-decoration-line: underline;
+                    text-decoration-thickness: 0.5px;
+                    text-underline-offset: 2px;
+                    
+                    
+                }
+            }
+            .oPCards{
+                flex-direction: column;
+                .oPCard{
+                    width: 100%;
+                    margin-bottom: 4%;
+                    margin-bottom: 10%;
+                    .oPCImageW .oPCImage{
+                        border-radius: 0.75rem;
+                    }
+                    .oPCText{
+                        padding-top: 4%;
+                        .metaData{
+                            padding-bottom: 1%;
+                            .oPCService{
+                                font-size: 0.9rem;
+                                font-weight: 300;
+                            }
+                            .oPCYear{
+                                font-size: 0.85rem;
+                                align-self: center;
+                            }
+                        }
+                        .oPCTitle{
+                            font-size: calc(1.6vw + 1rem);
+                            line-height: 18pt;
+                            letter-spacing: -1px;
+                            .oPCTSpan{
+                                font-size: calc(1vw + 0.95rem);
+                                font-weight: 500;
+                                letter-spacing: -1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /// ABOUT US PHONE MW 786 ///
+        /// .................... ///
+        
+        .Abody *{
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        canvas#aBackgroundG {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1; /* Behind other elements */
+            touch-action: none; 
+        }
+        .HeaderMenue{
+            .HeaderPhoneHide{
+                display: none;
+            }
+        }
+        .Asection1{
+            display: none;
+        }
+        .Button{
+            background-color: #424040;
+            text-align: center;
+            padding: 10px 16px 10px 16px;
+            border-radius: 50px;
+            color: #f5f5f5;
+            font-size: 3vw;
+            width: 35%;
+        }
+        .Asection1Phone{
+            display: block;
+            height: 90vh;
+            margin-top: 4.25vh;
+            width: 100%;
+            overflow: hidden;
+            
+            .AinnerSBP{
+                
+                height: 100%;
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+                .ATitleP{
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: flex-end;
+                    margin-bottom: 2vh;
+                    width: 100%;
+                    .ATitlePT{
+                        font-size: 20vw;
+                        color: #464646; 
+                        width: 100%;
+                        font-weight: 100;
+                        font-family: "Blauer";
+                        text-align: center;
+                    }
+                }
+                .ALandingSubTextPhone{
+                    width: 100%;
+                    height: 17.5vh;
+                    display: flex;
+                    align-items: flex-end;
+                    .ALandingSubTextPhoneP{
+                        font-size: calc(1.3vw + 1.1em);
+                        color: #464646;
+                        font-family: "BlauerRegular";
+                        text-align: justify;
+                        text-align-last: justify;
+                        text-indent: 10%; /* indent first line */
+                    }
+                    .ALandingSubTextPhoneP::after {
+                        content: '';
+                        display: inline-block;
+                        width: 10%;
+                    }
+
+                }
+                .ATitleBottomDiv{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 2vh;
+                        .ATitleP{
+                            margin-bottom: 0;
+                        }
+                        .AS1SepratorPhone{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            border-top: #9F9F9F63 solid 0.1px;
+                            border-bottom: #9f9f9f63 solid 0.1px;
+                            .AS1SepratorTextP{
+                                padding: 0.2rem 0;
+                                color: #464646;
+                                font-size: 0.8rem;
+                            }
+                            .AS1SepratorTextP2{
+                                padding: 0.2rem 0;
+                                color: #5439F8;
+                                font-size: 1rem;
+                                align-content: end;
+                            }
+                        }
+                    }
+            }
+        }
+        .Abody{
+            overflow: hidden;
+            
+            .ASub1v2{
+                display: none;
+                
+            }
+            .ASub1v2P{
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 5vh;
+                margin-bottom: 2.5vh;
+                overflow: hidden;
+                .ASubContP{
+                    height: 300vh;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                .ASub2ThreeJs{
+                    margin: 0;
+                    height: 0vh;
+                    width: 100%;
+                }
+                .timeline-wrapper{
+                    display: none;
+                }
+                .ASub2TextP{
+                    width: 100%;
+                    opacity: 0;
+                }
+                .Absdiv{
+                    width: 100%; 
+                    height: 85vh;
+                    position: relative;   /* Set as relative initially */
+                    display: flex;
+                    transform: translate3d(0, 0, 0);
+                    overflow-x: hidden;
+                    justify-content: center;
+                    .Spacer{
+                        margin-top: 2vh;
+                        width: 80%;
+                        height: 2px;
+                        background-color: #4646467c;
+                        .spacerFill{
+                            height: 2px;
+                            background: #5339ff;
+                            transform: translateX(calc(-100% + var(--P1, 0) * 100%));
+                            transition: transform 0.3s ease-out;
+                        }
+                    }
+                    .AsubTextNum2 .char{
+                        opacity: 0;
+                    }
+                    .ASubTextTitle2 .char{
+                        opacity: 0;
+                    }
+                    .ASubTextDescriptionP2 .word{
+                        opacity: 0;
+                    }
+                    
+                    .AsubTextNum3 .char{
+                        opacity: 0;
+                    }
+                    .ASubTextTitle3 .char{
+                        opacity: 0;
+                    }
+                    .ASubTextDescriptionP3 .word{
+                        opacity: 0;
+                    }
+                    .ASubTextV2P{
+                        justify-content: center;
+                        margin-left: 5vh;
+                        margin-right: 5vh;
+                        height: fit-content;
+                        margin-top: 2vh;
+                        
+                        
+                        .ASubTextContainerP{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            width: 100%;
+                            padding-top: 3vh;
+                            overflow: hidden;
+
+                            .AsubTextNum{
+                                font-size: calc(2vw + 0.55em);
+                                font-weight: 400;
+                                color: #424242;
+                                overflow: hidden;
+                            }
+                            .ASubTextTitle{
+                                font-size: calc(2.7vw + 2.7em);
+                                line-height: 95%;
+                                padding-bottom: 2.75vh;
+                                font-family: "BlauersemiBold";
+                                color: #424242;
+                                overflow: hidden;
+                            }
+                            .ASubTextRtrigger{
+                                display: none;
+                                justify-content: flex-start;
+                                padding-bottom: 1vh;
+                                padding-top: 1vh;
+                                .ASubButton{
+                                    font-size:  calc(1.25vw + 0.85em);
+                                    color:#424242;
+                                    font-weight: 400;
+                                    padding-right: 2vw;
+                                }
+                                .ASubButtonI{
+                                    font-size: calc(1.25vw + 0.85em);
+                                    color:#2d2d2d;
+                                    font-weight: 400;
+                                }
+                            }
+                                
+                        }
+                        
+                    
+                        .ASubTextDescriptionP{
+                            font-size: calc(2vw + 0.92em);
+                            line-height: 110%;
+                            font-weight: 200;
+                            color: #424242;
+                            padding: 0;
+                            padding-bottom: 3vh;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+            .ASubTextV21P{
+                z-index: 5;
+                position: absolute;
+                left: 0;
+            }
+            .ASubTextV22P{
+                z-index: 6;
+                transform: translate(200px, 0px, 0px);
+                position: absolute;
+            }
+            .ASubTextV23P{
+                z-index: 7;
+                x: 350; 
+                position: absolute;
+            }
+            .Asection2{
+                display: none!important;
+            }
+            
+            
+            .Asection2P{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                margin-bottom: 15%;
+                overflow: hidden;
+                .AS2T{
+                    font-family: 'BlauerSemibold';
+                    font-size:   calc(2.85vw + 2em);
+                    color: #424242;
+                    margin-bottom: 7vh;
+                }
+                .AfeturesTable{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .AS2Pic{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 40px;   
+                    }
+                    .AS2innertop{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin-bottom: 5%;
+                    }
+                    .cards{
+                        width: 100%;
+                        background-color: #b0c2ff6e;
+                        height: 45vh;
+                        margin-bottom: 2vh;
+                        border-radius: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        backdrop-filter: blur(100.2px);
+                        -webkit-backdrop-filter: blur(100.2px);
+                        .AS2innerDiv{
+                            height: 85%;
+                            display: flex;
+                            margin-right: 7.5%;
+                            margin-left: 12%;
+                            flex-direction: column;
+                            align-items:flex-start;
+                            justify-content: center;
+                            .AS2CH{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: start;
+                                font-weight: 400;
+                                margin-bottom: 2.5vh;
+
+                                .AS2CI{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    img{
+                                        height: 10vw;
+                                        object-fit: contain;
+                                    }
+                                    .AS2IS{
+                                        align-self: center;
+                                    }
+                                }
+                            }
+                            .AS2D{
+                                width: 100%;
+                                
+                                .AS2CT{
+                                    font-size: 2rem;
+                                    color: #424242;
+                                    margin-bottom: 2.5vh;
+                                    font-family: 'BlauerRegular';
+                                
+                                }
+                                .AS2CD{
+                                    text-align: start;
+                                    color: $test;
+                                    font-size: 1.05rem;
+                                    font-weight: 300;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+            }
+            .subSection3{
+                width: 100%;
+            }
+            .subS3div{
+                margin-bottom: 10vh;
+                flex-direction: column;
+                .subS3Title{
+                    display: none;
+                }
+                .subS3TitleText{
+                    display: none;
+                }
+                .subS3TitleTextP{
+                    font-size: 2rem;
+                    color: #424242;
+                    font-family: "BlauerRegular";
+                    position: relative;
+                    display: inline-block;
+                    line-height: 1.2;
+                    margin-bottom: 4vh;
+                }
+                .subS3DescDiv{
+                    width: 100%;
+                    height: fit-content;
+                    .subS3Desc{
+                        font-size: 1.125rem;
+                        margin-bottom: 5vh;
+                        font-weight: 300;
+                    }
+                    .subS3DescStats{
+                        flex-direction: column;
+                        align-content: flex-start;
+                        .subS3projects{
+                            margin-bottom: 3vh;
+                        }
+                        .subS3NumDesc{
+                            font-size: 1.05rem;
+                            color: #424242;
+                            font-weight: 300;
+                        }
+                        
+                    }
+                }   
+            }
+            
+    .section2AN{
+        .textSlide1, .TextSlide2, .TextSlide3{
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        .projectFrame{
+            flex-direction: column-reverse;
+            height: auto;
+            width: 90%;
+            justify-self: start;
+            margin-left: 5%;
+            margin-right: 5%;
+            
+            
+            .stickyIMG{
+                position: sticky;
+                top:5%;
+            }
+            .photosS2{
+                width: 85vw;
+                height: 80vw;
+            }
+            .projectImg{
+                width: 100%;
+                margin-top: 7.5%;
+                height: 100%;
+                margin-bottom: 0%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                object-fit: cover;
+                align-items: start;
+            }
+            .projectText{
+                width: 100%;
+                .textslides{
+                    height: 45vh;
+                    justify-content: center;
+                    width: 100%;
+                    align-items: center;
+                    padding-top: 25px;
+                }
+                .webLink{
+                    display: none;
+                }
+                .projectTitle{
+                    font-size: calc(2vw + 1.7em);
+                    padding: 4% 0 10% 0;
+                    text-align: center;
+                }
+                .projectDesc{
+                    display: none;
+                }
+                .projectDescPhone{
+                    font-size: calc(1.5vw + 0.65em);
+                    color: #424242;
+                }
+                .Button{
+                    font-size: 3vw;
+                }
+            }
+            .webLinkPhone{
+                color: $quad;
+                font-size: calc(2vw + 0.3em);
+                margin-top: 2.5%;
+            }
+        }
+    }
+            .ASection3 .AS3Body{
+                flex-direction: column;
+                width: 100%;
+                
+                .AS3Card1{
+                    margin-bottom: 2.5vh;
+                }
+                .AS3TText{
+                    font-size: 2.3rem;
+                }
+                .AS3Desc{
+                    width: 100%;
+                    font-size: 1.125rem;
+                    .AS3DescText{
+                        font-size: 1.125rem;
+                        margin-top: 1vh;
+                        margin-bottom: 2vh;
+                        
+                    }
+                }
+                .AS3CardsBody{
+                    width: 100%;
+                    .AS3CardsDiv{
+                        flex-direction: column;
+                        margin: 0;
+                        border: none;
+                        .AS3Card{
+                            width: 100%;
+                            margin-bottom: 3vh;
+                            .AS3CardNum{
+                                font-size: 1.125rem;
+                            }
+                            .AS3CardTitle{
+                                font-size: 1.8rem;
+                                color: #424242;
+                                font-family: "BlauerRegular";
+                            }
+                            .AS3CardDesc{
+                                font-size: 1.25rem;
+                                padding-bottom: 2vh;
+                            }
+                        }
+                    }
+                }
+            }
+            .AS3Card{
+                border-bottom: #050608 solid 0.1px;
+            }
+            
+            .section6{
+                display: none;
+            }
+        }
+          
+}
+.section5{
+    display: none!important;
+}

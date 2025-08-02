@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "tsl-textures/": "https://cdn.jsdelivr.net/npm/tsl-textures@0.6.0/src/"
+        }
+      }
+    </script>
+    <script type="module">
+      (function setLandingPageHeight() {
+        const ua = navigator.userAgent.toLowerCase();
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 1;
+        const width = window.innerWidth;
+
+        // Basic tablet detection, tweak as needed
+        const isTablet = (/ipad/.test(ua) || (/android/.test(ua) && !/mobile/.test(ua))) && isTouch;
+
+        if (isTablet) {
+          document.documentElement.style.setProperty('--landing-page-font-size', '18.5vw');
+          document.documentElement.style.setProperty('--landing-page-desc-width', '78vw');
+        } else {
+          document.documentElement.style.setProperty('--landing-page-font-size', '19vw');
+          document.documentElement.style.setProperty('--landing-page-desc-width', '80vw');
+        }
+      })();
+
+    </script>
+  </head>
+
+  <canvas id="aBackgroundG" class="aBackgroundG"></canvas>
+  <body class="Abody">
+        <hearder class="HeaderMenue">
+          <div class="HeaderMenueInner">
+            <h3 class="Logo">impulse</h3>
+            <div class="Links">
+              <a href="/index.html" class="Link HeaderPhoneHide">Home</a>
+              <a href="/contact.html" class="Link HeaderPhoneHide">Contact</a>
+              <a href="/about.html" class="Link burgerBar">
+                <span class="burgerBar1"></span>
+                <span class="burgerBar2"></span>
+              </a>
+            </div>
+          </div>
+        </hearder>
+
+
+        <div class="Amenue">
+          <div class="AMenueInner">
+            <div class="Alogo"></div>
+            <div class="AMLinks"></div>
+          </div>
+        </div>
+
+        <section class="Asection1">
+          <div class="AinnerSB">
+            <h3 class="ATitle" id="ATitle">IMPULSE</h3>
+            <div class="ATitleDesc">
+              <h4 class="AtitleSlogan ADescText">YOUR DIGITAL GROWTH</br>OUR IMPULSE</h4>
+              <h4 class="AtitleSpec ADescText">SPECIALIZING</br>ECOMMERCE SOLUTIONS</h4>
+              <h4 class="AtitleSpec ADescText">[Scroll]</h4>
+            </div>
+          </div>
+        </section>
+
+        <section class="Asection1Phone">
+          <div class="AinnerSBP">
+            <div class="ATitleBottomDiv">
+              <div class="AS1SepratorPhone">
+                <p class="AS1SepratorTextP">SPECIALIZING</br>IN ECOMMERCE SOLUTIONS</p>
+                <p class="AS1SepratorTextP2">[Scroll]</p>
+              </div>
+              <div class="ATitleP">
+                <h3 class="ATitlePT">IMPULSE</h3>
+              </div>
+            </div>
+            <div class="ALandingSubTextPhone">
+              <h4 class="ALandingSubTextPhoneP">We drive your digital growth with smart, tailored </br>e-commerce solutions.</h4>
+            </div>
+          </div>
+        </section>
+
+        <section id="ASub1v2" class="ASub1v2">
+          <div id="ASubCont" class="ASubCont">
+            <div class="ASub2Text">
+              <div class="timeline-wrapper">
+                <div class="timeline-line">
+                  <div class="clipper">
+                    <div class="filler"></div>
+                  </div>
+                  <span class="AsubDot dotFirst active"></span>
+                  <span class="AsubDot dotMid1"></span>
+                  <span class="AsubDot dotMid2"></span>
+                  <span class="AsubDot dotLast"></span>
+                </div>
+              </div>
+
+              <div class="Asub2Text Absdiv">
+                <div class="ASubTextV2 ASubTextV21">
+                  <div class="ASubTextContainer">
+                    <h4 class="AsubTextNum">01.</h4>
+                    <h3 class="ASubTextTitle">OUR MISSION</h3>
+                    <h4 class="ASubTextDescription">Our mission is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+                <div class="ASubTextV2 ASubTextV22">
+                  <div class="ASubTextContainer">
+                    <h4 class="AsubTextNum">02.</h4>
+                    <h3 class="ASubTextTitle">OUR VISION</h3>
+                    <h4 class="ASubTextDescription">Our vision is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+                <div class="ASubTextV2 ASubTextV23">
+                  <div class="ASubTextContainer">
+                    <h4 class="AsubTextNum">03.</h4>
+                    <h3 class="ASubTextTitle">OUR VALUES</h3>
+                    <h4 class="ASubTextDescription">Our values is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <canvas id="ASub2ThreeJs" class="ASub2ThreeJs"></canvas>
+          </div>
+        </section>
+
+        <section id="ASub1v2P" class="ASub1v2P">
+          <div id="ASubContP" class="ASubContP">
+            <div class="ASub2TextP Absdiv Absdiv1">
+              <div class="Spacer">
+                <div class="spacerFill"></div>
+              </div>
+              <div class="ASubTextV2P ASubTextV21P">
+                <div class="ASubTextContainerP">
+                  <h4 class="AsubTextNum AsubTextNum1">OUR</h4>
+                  <h3 class="ASubTextTitle ASubTextTitle1">MISSION</h3>
+                  <div class="ASubTextContP">
+                    <h4 class="ASubTextDescriptionP ASubTextDescriptionP1">Our mission is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="ASubTextV2P ASubTextV22P">
+                <div class="ASubTextContainerP">
+                  <h4 class="AsubTextNum AsubTextNum2">OUR</h4>
+                  <h3 class="ASubTextTitle ASubTextTitle2">VISION</h3>
+                  <div class="ASubTextContP">
+                    <h4 class="ASubTextDescriptionP ASubTextDescriptionP2">Our vision is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="ASubTextV2P ASubTextV23P">
+                <div class="ASubTextContainerP">
+                  <h4 class="AsubTextNum AsubTextNum3">OUR </h4>
+                  <h3 class="ASubTextTitle ASubTextTitle3">VALUES</h3>
+                  <div class="ASubTextContP">
+                    <h4 class="ASubTextDescriptionP ASubTextDescriptionP3">Our values is to empower businesses with strategic digital solutions that enhance brand visibility, optimize customer engagement, and drive sale.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <canvas id="ASub2ThreeJs" class="ASub2ThreeJs"></canvas>
+        </section>
+
+        <section class="section2AN" id="Projects">
+          <div class="title2 titleS">
+            <h2 class="textTitleS title ">PROJECTS</h2>
+          </div>
+          <div class="projectFrame">
+            <div class="projectText">
+              <div class="TextSlide1 textslides step">
+                <a href="" class="webLink">www.Realestate.impulsestudios.it</a>
+                <p class="projectDescPhone">Design - Development</p>
+                <h3 class="projectTitle">Real Estate</br> <span>Luxury</span> Lisitngs,</h3>
+                <p class="projectDesc">Branding, Website, Design, Development</p>
+                <a href="" class="Button">View More</a>
+              </div>
+              <div class="TextSlide2 textslides step">
+                <a href="" class="webLink">www.Realestate.impulsestudios.it</a>
+                <p class="projectDescPhone"> Design - Development</p>
+                <h3 class="projectTitle">Beauty Brand,</br><span>Fashion</span> E-commerce</h3>
+                <p class="projectDesc"> Website, Design, Development</p>
+                <a href="" class="Button">View More</a>
+              </div>
+              <div class="TextSlide3 textslides step">
+                <a href="" class="webLink">www.Realestate.impulsestudios.it</a>
+                <p class="projectDescPhone"> Design - Development</p>
+                <h3 class="projectTitle">Jewlery Brand,</br><span>Nieche</span> E-commerce</h3>
+                <p class="projectDesc"> Website, Design, Development</p>
+                <a href="" class="Button">View More</a>
+              </div>
+            </div>
+            <div class="projectImg">
+              <div class="photosS2">
+                <a class="imgRealEstate">
+                  <div class="first show-image fixed" style=" z-index: 5;"></div>
+                </a>
+                <a class="imgjewlery">
+                  <div class="second show-image fixed" style=" z-index: 4;"></div>
+                </a>
+                <a class="imgGroovyGoods">
+                  <div class="third show-image fixed" style=" z-index: 3;"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="Asection2">
+          <h3 class="AS2T">WHY CHOOSE US</h3>
+          <div class="AfeturesTable">
+            <div class="AS2innertop">
+              <div class="cards card1">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI"><img src="/Gallery/LandingImages/Icons/AS21.png"></icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Result Driven</h4>
+                    <p class="AS2CD">We focus on driving traffic, and engagement that grow your business.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cards card2">
+                <img src="/Gallery/LandingImages/AS2TopP.png" alt="" class="AS2Pic">
+              </div>
+
+              <div class="cards card3">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI">
+                      <img src="Gallery/LandingImages/Icons/AS22.png" alt="" class="AS2IS">
+                    </icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Speed & Efficiency</h4>
+                    <p class="AS2CD">We get your online store running quickly without compromising quality.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="AS2innerbot">
+              <div class="cards cardB card4">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI">
+                      <img src="/Gallery/LandingImages/Icons/AS23.png" alt="" srcset="">
+                    </icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Affordability</h4>
+                    <p class="AS2CD"> We deliver high-quality solutions that maximize impact within your budget.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards card5">
+                <img src="/Gallery/LandingImages/AS2BotP.png" alt="" class="AS2Pic">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="Asection2P">
+          <h3 class="AS2T">WHY US</h3>
+          <div class="AfeturesTable">
+            <div class="AS2innertop">
+              <div class="cards card1">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI"><img src="/Gallery/LandingImages/Icons/AS21.png"></icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Result Driven</h4>
+                    <p class="AS2CD">We focus on driving traffic, and engagement that grow your business.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards card2">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI">
+                      <img src="Gallery/LandingImages/Icons/AS22.png" alt="" class="AS2IS">
+                    </icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Speed & Efficiency</h4>
+                    <p class="AS2CD">We get your online store running quickly without compromising quality.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards card3">
+                <div class="AS2innerDiv">
+                  <div class="AS2CH">
+                    <icon class="AS2CI">
+                      <img src="/Gallery/LandingImages/Icons/AS23.png" alt="" srcset="">
+                    </icon>
+                  </div>
+                  <div class="AS2D">
+                    <h4 class="AS2CT">Affordability</h4>
+                    <p class="AS2CD"> We deliver high-quality solutions that maximize impact within your budget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subSection3">
+          <div class="subS3div">
+            <div class="subS3Title">
+              <h3 class="subS3TitleText">We Empower </br>your Brand with</br>Creativity</h3>
+            </div>
+            <div class="subS3TitleP">
+              <h3 class="subS3TitleTextP">We Empower</br>your Brand with Creativity</h3>
+            </div>
+            <div class="subS3DescDiv">
+              <h3 class="subS3Desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur interdum, nunc libero ultricies velit, sed malesuada justo mauris id libero. Integer in libero vel odio convallis fermentum</h3>
+              <div class="subS3DescStats">
+                <div class="subS3projects">
+                  <h3 class="subS3Numb">30+</h3>
+                  <h4 class="subS3NumDesc">Projects completed</h4>
+                </div>
+                <div class="subS3years">
+                  <h3 class="subS3Numb">4+</h3>
+                  <h4 class="subS3NumDesc">Years of Experience</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ASection3">
+          <div class="AS3Title">
+            <h3 class="AS3TText">OUR SERVICES</h3>
+          </div>
+
+          <div class="AS3Body">
+            <div class="AS3Desc">
+              <p class="AS3DescText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur interdum, nunc libero
+              </p>
+            </div>
+
+            <div class="AS3CardsBody">
+              <div class="AS3CTop AS3CardsDiv">
+                <div class="AS3Card AS3Card1">
+                  <p class="AS3CardNum">01</p>
+                  <h3 class="AS3CardTitle"><span class="AS3CDot"></span>E-commerce</h3>
+                  <p class="AS3CardDesc">we build and optimize online stores using WooCommerce and Shopify, ensuring seamless functionality, secure payments..</p>
+                </div>
+                <div class="AS3Card AS3Card2">
+                  <p class="AS3CardNum">02</p>
+                  <h3 class="AS3CardTitle"><span class="AS3CDot"></span>WORDPRESS SITES</h3>
+                  <p class="AS3CardDesc">custom and ready-to-use WordPress sites tailored to your brand, offering flexibility, responsiveness, and easy management.</p>
+                </div>
+              </div>
+              <div class="AS3Cbottom AS3CardsDiv">
+                <div class="AS3Card AS3Card3">
+                  <p class="AS3CardNum">03</p>
+                  <h3 class="AS3CardTitle"><span class="AS3CDot"></span>E-commerce</h3>
+                  <p class="AS3CardDesc">we build and optimize online stores using WooCommerce and Shopify, ensuring seamless functionality, secure payments.</p>
+                </div>
+                <div class="AS3Card AS3Card4">
+                  <p class="AS3CardNum">04</p>
+                  <h3 class="AS3CardTitle"><span class="AS3CDot"></span>E-commerce</h3>
+                  <p class="AS3CardDesc">we build and optimize online stores using WooCommerce and Shopify, ensuring seamless functionality, secure payments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section6">
+          <div class="TextholderS6">
+            <h2 class="TextS6">We create a digital experience that borders on efficiency, aesthetics and functionality. These are projects that have a soul.</h2>
+          </div>
+        </section>
+        <section class="section7">
+          <div class="mockupHolderS7">
+              <img src="" alt="">
+          </div>
+          </section> 
+        <section class="section8">
+          <div class="S8Cont">
+            <div class="S83DCont">
+              <canvas id="heartS8"></canvas>
+            </div>
+            <div class="S8Text">
+                <h2 class="S8Title">Want to build</br>something better?</h2>
+                <p class="S8Desc">Our team brings together design, development, and strategic thinking to help you grow.</p>
+                <a>Start Now</a>
+          </div>
+          </section>
+
+        <footer class="footer">
+          <div class="footerNavFrame">
+            <div class="informationFooter">
+              <div class="emailF">
+                <p class="fT fFP">we would love to hear from you</p>
+                <a href="" class="emailContact">
+                  <h4 class="footerEmailLink">info@impulsestudios.it</h4>
+                </a>
+              </div>
+              <div class="navF">
+                <div class="socialsF fNavLinks">
+                  <p class="fFP FST">socials</p>
+                  <a class="fFP">Instagram</a>
+                  <a class="fFP">Behance</a>
+                  <a class="fFP">Linked In</a>
+                </div>
+                <div class="locationF fNavLinks">
+                  <p class="fFP FST">Location</p>
+                  <p class="fFP">Italy, Venice</br>Lebanon, Beirut</br>UAE.</p>
+                </div>
+                <div class="phoneF fNavLinks">
+                  <p class="fFP FST">Phone</p> 
+                  <a href="" class="fFP">+39 348-905-8699</a>
+                </div>
+              </div>
+            </div>
+            <div class="contactUsFooter">
+              <div class="RoundButton RBF">
+                <a href="" class="roundButtonContent">
+                  <span class="Buttoncircle"></span>
+                  <svg  width="18" height="18" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.598 2.51465H5.7557V0.764648H25.258L25.258 21.6932H23.508L23.508 4.10635L2.02413 27.2351L0.741943 26.0441L22.598 2.51465Z" fill="black"></path>
+                  </svg>
+                  <p class="ButtonText">Contact Us</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <p class="copyRights">© 2025 impulse, Inc.</p>
+        </footer>
+
+
+    <script type="module" src="/mainA4.js"></script>
+  </body>
+</html>
